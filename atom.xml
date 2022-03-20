@@ -7,8 +7,8 @@
     <category term="leetcode" />
     <category term="python" />
     <category term="matlab" />
-    <category term="深度学习" />
     <category term="数据分析" />
+    <category term="深度学习" />
     <entry>
         <id>https://chencc8.github.io/2022/03/20/matlab-jie-gou-hua-cheng-shi-yu-zi-ding-yi-han-shu/</id>
         <title>matlab结构化程式与自定义函数</title>
@@ -221,9 +221,9 @@
         <updated>2022-03-17T11:14:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://chencc8.github.io/2022/03/14/juan-ji-he-juan-ji-shen-jing-wang-luo/</id>
-        <title>卷积和卷积神经网络</title>
-        <link rel="alternate" href="https://chencc8.github.io/2022/03/14/juan-ji-he-juan-ji-shen-jing-wang-luo/"/>
+        <id>https://chencc8.github.io/2022/03/14/shen-du-xue-xi-juan-ji-he-juan-ji-shen-jing-wang-luo/</id>
+        <title>深度学习-卷积和卷积神经网络</title>
+        <link rel="alternate" href="https://chencc8.github.io/2022/03/14/shen-du-xue-xi-juan-ji-he-juan-ji-shen-jing-wang-luo/"/>
         <content type="html">&lt;h1 id=&#34;卷积和卷积神经网络&#34;&gt;&lt;a href=&#34;#卷积和卷积神经网络&#34; class=&#34;headerlink&#34; title=&#34;卷积和卷积神经网络&#34;&gt;&lt;/a&gt;卷积和卷积神经网络&lt;/h1&gt;&lt;h2 id=&#34;卷积&#34;&gt;&lt;a href=&#34;#卷积&#34; class=&#34;headerlink&#34; title=&#34;卷积&#34;&gt;&lt;/a&gt;卷积&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;概念&lt;/p&gt;
 &lt;p&gt;一个系统，输入不稳定，输出稳定，用卷积求系统存量&lt;/p&gt;
@@ -1037,44 +1037,6 @@
         <updated>2022-02-20T11:29:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://chencc8.github.io/2022/02/20/tiao-yue-you-xi/</id>
-        <title>跳跃游戏</title>
-        <link rel="alternate" href="https://chencc8.github.io/2022/02/20/tiao-yue-you-xi/"/>
-        <content type="html">&lt;h1 id=&#34;跳跃游戏&#34;&gt;&lt;a href=&#34;#跳跃游戏&#34; class=&#34;headerlink&#34; title=&#34;跳跃游戏&#34;&gt;&lt;/a&gt;跳跃游戏&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;题目&lt;/p&gt;
-&lt;p&gt;  给定一个非负整数数组 nums ，你最初位于数组的&lt;strong&gt;第一个&lt;/strong&gt;下标 。&lt;/p&gt;
-&lt;p&gt;  数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
-&lt;p&gt;  判断你是否能够到达最后一个下标。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;实例：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;示例1：&lt;br&gt;  &lt;strong&gt;输入&lt;/strong&gt;：nums = [2,3,1,1,4]&lt;br&gt;  &lt;strong&gt;输出&lt;/strong&gt;：true&lt;br&gt;  &lt;strong&gt;解释&lt;/strong&gt;：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。&lt;/li&gt;
-&lt;li&gt;示例2：&lt;br&gt;  &lt;strong&gt;输入&lt;/strong&gt;：nums = [3,2,1,0,4]&lt;br&gt;  &lt;strong&gt;输出&lt;/strong&gt;：false&lt;br&gt;  &lt;strong&gt;解释&lt;/strong&gt;：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;提示&lt;br&gt;  1 &amp;lt;= nums.length &amp;lt;= 3e4&lt;br&gt;  0 &amp;lt;= nums[i] &amp;lt;= 1e5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;题解思路：&lt;br&gt;  分为两种情况：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;当数组长度为1时，不管是多少，都能到达最后一位&lt;/li&gt;
-&lt;li&gt;当数组长度&amp;gt;=1时，遍历数组，记录可以跳转的最大位置，若相加后索引大于等于最后一位索引，则一定能到达最后一位，返回True，若小于最后一位索引，则记为最大长度，若后续超过最大长度，则更新最大长度。若遍历后最大长度不能到达，返回False。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;题解&lt;/p&gt;
-  &lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Solution&lt;/span&gt;(&lt;span class=&#34;title class_ inherited__&#34;&gt;object&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   	&lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;canJump&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;self, nums&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;string&#34;&gt;&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	:type nums: List[int]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	:rtype: bool&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	r, i, n = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;built_in&#34;&gt;len&lt;/span&gt;(nums)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; n == &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; i &amp;lt;= r:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	r = &lt;span class=&#34;built_in&#34;&gt;max&lt;/span&gt;(r, i + nums[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; r &amp;gt;= n - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	i += &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;False&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  时间复杂度：O(n)&lt;br&gt;  空间复杂度：O(1)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;官方题解&lt;/p&gt;
-  &lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Solution&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   	&lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;canJump&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;self, nums: &lt;span class=&#34;type&#34;&gt;List&lt;/span&gt;[&lt;span class=&#34;built_in&#34;&gt;int&lt;/span&gt;]&lt;/span&gt;) -&amp;gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	n, rightmost = &lt;span class=&#34;built_in&#34;&gt;len&lt;/span&gt;(nums), &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;range&lt;/span&gt;(n):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; i &amp;lt;= rightmost:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	rightmost = &lt;span class=&#34;built_in&#34;&gt;max&lt;/span&gt;(rightmost, i + nums[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; rightmost &amp;gt;= n - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                   	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;False&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  时间复杂度：O(n)&lt;br&gt;  空间复杂度：O(1)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="leetcode" />
-        <category term="python" />
-        <updated>2022-02-20T11:29:30.000Z</updated>
-    </entry>
-    <entry>
         <id>https://chencc8.github.io/2022/02/20/sheng-shui-zui-duo-de-rong-qi/</id>
         <title>盛水最多的容器</title>
         <link rel="alternate" href="https://chencc8.github.io/2022/02/20/sheng-shui-zui-duo-de-rong-qi/"/>
@@ -1105,6 +1067,44 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;题解&lt;/p&gt;
   &lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Solution&lt;/span&gt;(&lt;span class=&#34;title class_ inherited__&#34;&gt;object&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;maxArea&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;self, height&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;string&#34;&gt;&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       :type height: List[int]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       :rtype: int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       &#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       l, r = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;built_in&#34;&gt;len&lt;/span&gt;(height) - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       x = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; l &amp;lt; r:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           i = &lt;span class=&#34;built_in&#34;&gt;min&lt;/span&gt;(height[l], height[r]) * (r - l)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           x = &lt;span class=&#34;built_in&#34;&gt;max&lt;/span&gt;(x, i)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; height[l] &amp;lt;= height[r]:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               l += &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               r -= &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; x&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;  时间复杂度：O(n)&lt;br&gt;  空间复杂度：O(1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="leetcode" />
+        <category term="python" />
+        <updated>2022-02-20T11:29:30.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://chencc8.github.io/2022/02/20/tiao-yue-you-xi/</id>
+        <title>跳跃游戏</title>
+        <link rel="alternate" href="https://chencc8.github.io/2022/02/20/tiao-yue-you-xi/"/>
+        <content type="html">&lt;h1 id=&#34;跳跃游戏&#34;&gt;&lt;a href=&#34;#跳跃游戏&#34; class=&#34;headerlink&#34; title=&#34;跳跃游戏&#34;&gt;&lt;/a&gt;跳跃游戏&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目&lt;/p&gt;
+&lt;p&gt;  给定一个非负整数数组 nums ，你最初位于数组的&lt;strong&gt;第一个&lt;/strong&gt;下标 。&lt;/p&gt;
+&lt;p&gt;  数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
+&lt;p&gt;  判断你是否能够到达最后一个下标。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;示例1：&lt;br&gt;  &lt;strong&gt;输入&lt;/strong&gt;：nums = [2,3,1,1,4]&lt;br&gt;  &lt;strong&gt;输出&lt;/strong&gt;：true&lt;br&gt;  &lt;strong&gt;解释&lt;/strong&gt;：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。&lt;/li&gt;
+&lt;li&gt;示例2：&lt;br&gt;  &lt;strong&gt;输入&lt;/strong&gt;：nums = [3,2,1,0,4]&lt;br&gt;  &lt;strong&gt;输出&lt;/strong&gt;：false&lt;br&gt;  &lt;strong&gt;解释&lt;/strong&gt;：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提示&lt;br&gt;  1 &amp;lt;= nums.length &amp;lt;= 3e4&lt;br&gt;  0 &amp;lt;= nums[i] &amp;lt;= 1e5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;题解思路：&lt;br&gt;  分为两种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当数组长度为1时，不管是多少，都能到达最后一位&lt;/li&gt;
+&lt;li&gt;当数组长度&amp;gt;=1时，遍历数组，记录可以跳转的最大位置，若相加后索引大于等于最后一位索引，则一定能到达最后一位，返回True，若小于最后一位索引，则记为最大长度，若后续超过最大长度，则更新最大长度。若遍历后最大长度不能到达，返回False。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;题解&lt;/p&gt;
+  &lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Solution&lt;/span&gt;(&lt;span class=&#34;title class_ inherited__&#34;&gt;object&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   	&lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;canJump&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;self, nums&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;string&#34;&gt;&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	:type nums: List[int]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	:rtype: bool&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;       	&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	r, i, n = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;built_in&#34;&gt;len&lt;/span&gt;(nums)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; n == &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; i &amp;lt;= r:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	r = &lt;span class=&#34;built_in&#34;&gt;max&lt;/span&gt;(r, i + nums[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; r &amp;gt;= n - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	i += &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;False&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;  时间复杂度：O(n)&lt;br&gt;  空间复杂度：O(1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;官方题解&lt;/p&gt;
+  &lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Solution&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   	&lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;canJump&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;self, nums: &lt;span class=&#34;type&#34;&gt;List&lt;/span&gt;[&lt;span class=&#34;built_in&#34;&gt;int&lt;/span&gt;]&lt;/span&gt;) -&amp;gt; &lt;span class=&#34;built_in&#34;&gt;bool&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	n, rightmost = &lt;span class=&#34;built_in&#34;&gt;len&lt;/span&gt;(nums), &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;range&lt;/span&gt;(n):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; i &amp;lt;= rightmost:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	rightmost = &lt;span class=&#34;built_in&#34;&gt;max&lt;/span&gt;(rightmost, i + nums[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;               	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; rightmost &amp;gt;= n - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                   	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;True&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;False&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;  时间复杂度：O(n)&lt;br&gt;  空间复杂度：O(1)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

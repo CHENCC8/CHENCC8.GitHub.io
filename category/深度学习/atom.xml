@@ -7,12 +7,12 @@
     <category term="leetcode" />
     <category term="python" />
     <category term="matlab" />
-    <category term="深度学习" />
     <category term="数据分析" />
+    <category term="深度学习" />
     <entry>
-        <id>https://chencc8.github.io/2022/03/14/juan-ji-he-juan-ji-shen-jing-wang-luo/</id>
-        <title>卷积和卷积神经网络</title>
-        <link rel="alternate" href="https://chencc8.github.io/2022/03/14/juan-ji-he-juan-ji-shen-jing-wang-luo/"/>
+        <id>https://chencc8.github.io/2022/03/14/shen-du-xue-xi-juan-ji-he-juan-ji-shen-jing-wang-luo/</id>
+        <title>深度学习-卷积和卷积神经网络</title>
+        <link rel="alternate" href="https://chencc8.github.io/2022/03/14/shen-du-xue-xi-juan-ji-he-juan-ji-shen-jing-wang-luo/"/>
         <content type="html">&lt;h1 id=&#34;卷积和卷积神经网络&#34;&gt;&lt;a href=&#34;#卷积和卷积神经网络&#34; class=&#34;headerlink&#34; title=&#34;卷积和卷积神经网络&#34;&gt;&lt;/a&gt;卷积和卷积神经网络&lt;/h1&gt;&lt;h2 id=&#34;卷积&#34;&gt;&lt;a href=&#34;#卷积&#34; class=&#34;headerlink&#34; title=&#34;卷积&#34;&gt;&lt;/a&gt;卷积&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;概念&lt;/p&gt;
 &lt;p&gt;一个系统，输入不稳定，输出稳定，用卷积求系统存量&lt;/p&gt;
