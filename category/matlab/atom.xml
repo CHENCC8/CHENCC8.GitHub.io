@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://chencc8.github.io</id>
+    <title>Orange • Posts by &#34;matlab&#34; category</title>
+    <link href="https://chencc8.github.io" />
+    <updated>2022-03-19T16:57:09.000Z</updated>
+    <category term="leetcode" />
+    <category term="python" />
+    <category term="matlab" />
+    <category term="深度学习" />
+    <category term="数据分析" />
+    <entry>
+        <id>https://chencc8.github.io/2022/03/20/matlab-jie-gou-hua-cheng-shi-yu-zi-ding-yi-han-shu/</id>
+        <title>matlab结构化程式与自定义函数</title>
+        <link rel="alternate" href="https://chencc8.github.io/2022/03/20/matlab-jie-gou-hua-cheng-shi-yu-zi-ding-yi-han-shu/"/>
+        <content type="html">&lt;h1 id=&#34;matlab结构化程式与自定义函数&#34;&gt;&lt;a href=&#34;#matlab结构化程式与自定义函数&#34; class=&#34;headerlink&#34; title=&#34;matlab结构化程式与自定义函数&#34;&gt;&lt;/a&gt;matlab结构化程式与自定义函数&lt;/h1&gt;&lt;h2 id=&#34;MATLAB-Script-脚本&#34;&gt;&lt;a href=&#34;#MATLAB-Script-脚本&#34; class=&#34;headerlink&#34; title=&#34;MATLAB Script(脚本)&#34;&gt;&lt;/a&gt;MATLAB Script(脚本)&lt;/h2&gt;&lt;p&gt;A file containing a series of MATLAB commands.&lt;br&gt;Pretty much like a C/C++ program.&lt;br&gt;Scripts need to be saved to a &amp;lt;file&amp;gt;.m file before they can be run.&lt;/p&gt;
+&lt;p&gt;tips:1 . matlab中注释符号为%，两个百分号%%分为section(用于debug)&lt;br&gt;   2 . Smart Indent （智能缩进）功能，用于自动对齐&lt;br&gt;   3 . 尽量使用Script Editor（编辑器）&lt;/p&gt;
+&lt;h2 id=&#34;Script-Flow&#34;&gt;&lt;a href=&#34;#Script-Flow&#34; class=&#34;headerlink&#34; title=&#34;Script Flow&#34;&gt;&lt;/a&gt;Script Flow&lt;/h2&gt;&lt;p&gt;Typically scripts run from the first line to the last.&lt;br&gt;&lt;strong&gt;Structured programming&lt;/strong&gt; techniques(subroutine, loop, condition, etc) are applied to make the program looks neat.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Relational (Logical) Operators&lt;br&gt;  &amp;lt; , &amp;lt;= , &amp;gt; , &amp;gt;= , == , ~=(不等于) , &amp;amp;&amp;amp;, ||&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;Flow-Control&#34;&gt;&lt;a href=&#34;#Flow-Control&#34; class=&#34;headerlink&#34; title=&#34;Flow Control&#34;&gt;&lt;/a&gt;Flow Control&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;if,elseif,else&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;for&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;continue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;switch,case,otherwise&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;end&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;try,catch&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;pause&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;while&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;return&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;tip:&lt;br&gt;   1 . rem(a, 2)是求余数 -&amp;gt; remainder&lt;br&gt;   2 . prod(1:n) -&amp;gt; n的阶乘&lt;br&gt;   如果A是向量，prod(A)返回A向量的乘积。&lt;br&gt;   如果A是矩阵，prod(A)将A看作列向量，返回每一列元素的乘积并组成一个行向量B。&lt;br&gt;   如果A是多维数组，prod(A)沿着第一个非单例作为向量，返回一个行向量数组。&lt;br&gt;   B = prod(A,dim)  沿着指定的dim标量的维计算A矩阵的乘积。&lt;/p&gt;
+&lt;h2 id=&#34;Pre-allocating-Space-to-Variables&#34;&gt;&lt;a href=&#34;#Pre-allocating-Space-to-Variables&#34; class=&#34;headerlink&#34; title=&#34;Pre-allocating Space to Variables&#34;&gt;&lt;/a&gt;Pre-allocating Space to Variables&lt;/h2&gt;&lt;p&gt;tic - toc : 用来计算时间&lt;/p&gt;
+&lt;figure class=&#34;highlight matlab&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;%%&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tic&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; ii = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;2000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; jj = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;2000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        A(ii, jj) = ii + jj;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;toc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;%%&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tic&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;A = &lt;span class=&#34;built_in&#34;&gt;zeros&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;2000&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;2000&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; ii = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;built_in&#34;&gt;size&lt;/span&gt;(A, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; jj = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;built_in&#34;&gt;size&lt;/span&gt;(A, &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        A(ii, jj) = ii + jj;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;toc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第二节明显比第一节多用时间短&lt;/p&gt;
+&lt;h2 id=&#34;Tips-for-Script-Writing&#34;&gt;&lt;a href=&#34;#Tips-for-Script-Writing&#34; class=&#34;headerlink&#34; title=&#34;Tips for Script Writing&#34;&gt;&lt;/a&gt;Tips for Script Writing&lt;/h2&gt;&lt;p&gt;Use ellipsis(…) to make scripts more readable(matlab中书写向量或矩阵不能直接换行)&lt;br&gt;e.g.  A = [1 2 3 4 5 6;7 …&lt;br&gt;   8 9 10 11 12]&lt;/p&gt;
+&lt;p&gt;Press Ctrl + C to terminate the script before conclusion&lt;/p&gt;
+&lt;h2 id=&#34;Scripts-vs-Functions&#34;&gt;&lt;a href=&#34;#Scripts-vs-Functions&#34; class=&#34;headerlink&#34; title=&#34;Scripts vs. Functions&#34;&gt;&lt;/a&gt;Scripts vs. Functions&lt;/h2&gt;&lt;p&gt;Scripts and functions are both .m file that contain MATLAB commands&lt;br&gt;Functions are written when we need to perform routines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Functions&lt;br&gt;  keyword: function&lt;br&gt;  &lt;strong&gt;function output = function name(input)&lt;/strong&gt;&lt;br&gt;  文件保存时要以function name为文件名保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;e.g.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight matlab&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;x&lt;/span&gt; = &lt;span class=&#34;title&#34;&gt;freebody&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(x0, v0, t)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% calculation of free falling&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% x0: initial displacement in m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% v0: initial velocity in m/sec&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% t: the elapsed time in sec&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% x: the depth of falling in m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;x = x0 + v0 .* t + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;/&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;*&lt;span class=&#34;number&#34;&gt;9.8&lt;/span&gt;*t.*t;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% .*是因为输入值可以为向量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% 以下为调用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;freebody(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;% 如果不用.*结果会出错，不能正确对应输入值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;freebody([&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;], [&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;], [&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;20&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;e.g.2&lt;figure class=&#34;highlight matlab&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;params&#34;&gt;[a F]&lt;/span&gt; = &lt;span class=&#34;title&#34;&gt;acc&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(v2, v1, t2, t1, m)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;a = (v2 - v1)./(t2 - t1);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;F = m.*a;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[Acc Force] = acc(&lt;span class=&#34;number&#34;&gt;20&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;Function-Default-Variables&#34;&gt;&lt;a href=&#34;#Function-Default-Variables&#34; class=&#34;headerlink&#34; title=&#34;Function Default Variables&#34;&gt;&lt;/a&gt;Function Default Variables&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;inputname&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Variable name of function input&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;mfilename&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;File name of currently running function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;nargin&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Number of function input arguments&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;nargout&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Number of function output arguments&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;varargin&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Variable length input argument list&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;varargout&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Variable length output argument list&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;e.g.&lt;/p&gt;
+&lt;figure class=&#34;highlight matlab&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;params&#34;&gt;[volumn]&lt;/span&gt; = &lt;span class=&#34;title&#34;&gt;pillar&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(Do, Di, height)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; nargin == &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	height = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;volume = &lt;span class=&#34;built_in&#34;&gt;abs&lt;/span&gt;(Do.^&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; - Di.^&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;).*height*&lt;span class=&#34;built_in&#34;&gt;pi&lt;/span&gt;/&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Function-Handles&#34;&gt;&lt;a href=&#34;#Function-Handles&#34; class=&#34;headerlink&#34; title=&#34;Function Handles&#34;&gt;&lt;/a&gt;Function Handles&lt;/h2&gt;&lt;p&gt;A way to create anonymous(匿名函数) functions, i.e., one line expression functions that do not have to be defined in .m files.&lt;/p&gt;
+&lt;p&gt;e.g.&lt;/p&gt;
+&lt;figure class=&#34;highlight matlab&#34;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;f = @(x) &lt;span class=&#34;built_in&#34;&gt;exp&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;-2&lt;/span&gt; * x);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;x = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;plot&lt;/span&gt;(x, f(x));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="matlab" />
+        <updated>2022-03-19T16:57:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://chencc8.github.io/2022/03/17/matlab-ji-ben-cao-zuo-ju-zhen-cao-zuo/</id>
+        <title>matlab基本操作+矩阵操作</title>
+        <link rel="alternate" href="https://chencc8.github.io/2022/03/17/matlab-ji-ben-cao-zuo-ju-zhen-cao-zuo/"/>
+        <content type="html">&lt;h2 id=&#34;matlab基本操作&#34;&gt;&lt;a href=&#34;#matlab基本操作&#34; class=&#34;headerlink&#34; title=&#34;matlab基本操作&#34;&gt;&lt;/a&gt;matlab基本操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Special Variables and Constants&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ans&lt;/li&gt;
+&lt;li&gt;i, j: complex number(复数)&lt;/li&gt;
+&lt;li&gt;Inf: ∞&lt;/li&gt;
+&lt;li&gt;eps: 2.2204e-016(指一个很小的数)&lt;/li&gt;
+&lt;li&gt;NaN: not a number&lt;/li&gt;
+&lt;li&gt;pi: Π&lt;/li&gt;
+&lt;li&gt;变量名不能是关键词&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To list keywords:&lt;br&gt;   iskeyword&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;e.g.&lt;/p&gt;
+&lt;p&gt;  x = 1/0    -&amp;gt; Inf&lt;br&gt;  x = log(0)        -&amp;gt; -Inf&lt;br&gt;  x = inf/inf        -&amp;gt; NaN&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MATLAB Calling Priority&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Varieble &amp;gt; Built-in function &amp;gt; Subunction &amp;gt; Private function(MEX-file &amp;gt; P-file &amp;gt; M-file)&lt;/li&gt;
+&lt;li&gt;不要用 built-in function name 或者 keyword 当作 variable name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Numeric Display  “Format”&lt;br&gt;  short    -&amp;gt; 小数点后4位&lt;br&gt;  long    -&amp;gt; 双精度小数点后15位，单精度小数点后7位&lt;br&gt;  shortE    -&amp;gt; 科学表示法，小数点后4位&lt;br&gt;  longE    -&amp;gt; 科学表示法，双精度小数点后15位，单精度小数点后7位&lt;br&gt;  bank    -&amp;gt; 如美金，保留至小数点后两位&lt;br&gt;  hex        -&amp;gt; 转为16进制&lt;br&gt;  rat        -&amp;gt; 转成有理数（即分数)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Command Line Terminal&lt;br&gt;  ; at the end of a command suppresses output to the terminal&lt;br&gt;  （加分号后不显示运算结果）&lt;br&gt;  方向键↑ display previous commands&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some Functions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;clc  -&amp;gt; clear command window display&lt;/li&gt;
+&lt;li&gt;clear/clear all -&amp;gt; remove all variables in the workspace&lt;/li&gt;
+&lt;li&gt;close all -&amp;gt; to close all figures&lt;/li&gt;
+&lt;li&gt;who -&amp;gt; variables in the workspace&lt;/li&gt;
+&lt;li&gt;whos -&amp;gt; variable information of the workspace&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量命名规则&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;变量名区分大小写&lt;/li&gt;
+&lt;li&gt;变量名长度不超过63位&lt;/li&gt;
+&lt;li&gt;注释：&lt;strong&gt;单％是注释，双％％是分节&lt;/strong&gt;。双%%后面空格一下写的东西也视作注释&lt;/li&gt;
+&lt;li&gt;变量名以&lt;strong&gt;字母&lt;/strong&gt;开头，可以由&lt;strong&gt;字母，数字和下划线&lt;/strong&gt;组成，但不能使用标点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;matlab矩阵操作&#34;&gt;&lt;a href=&#34;#matlab矩阵操作&#34; class=&#34;headerlink&#34; title=&#34;matlab矩阵操作&#34;&gt;&lt;/a&gt;matlab矩阵操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Array(Vector and Matrix)&lt;br&gt;  Row vector:&lt;br&gt;  a = [1 2 3 4]&lt;br&gt;  Column Vector:&lt;br&gt;  b = [1; 2; 3; 4]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Array Indexing&lt;br&gt;  &lt;strong&gt;从1开始，不是从0开始&lt;/strong&gt;&lt;br&gt;  Select a certain subset of elements inside a matrix&lt;br&gt;  e.g.   A(8)&lt;br&gt;  A([1 3 5])&lt;br&gt;  A([1 3; 1 3])&lt;br&gt;  A(3,2)&lt;br&gt;  A([1 3], [1 3])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Replacing Entries&lt;br&gt;  The expression  A() = []     delete rows or columns of A&lt;br&gt;  A(3, : ) -&amp;gt; 第三行全部&lt;br&gt;  A(3, :) = [] -&amp;gt; 删除第三行全部&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Colon(分号) Operator&lt;br&gt;  e.g.  B = 1 : 5&lt;br&gt; B = 1 : 2 : 5&lt;br&gt; str = ‘a’ : 2 : ‘z’&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Array Concatenation&lt;br&gt;  F = [A B]  -&amp;gt; 横向排列&lt;br&gt;  F = [A ; B]  -&amp;gt; 竖向排列&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Array Manipulation(类似线代)&lt;br&gt;  A * B -&amp;gt; 表示矩阵乘法&lt;br&gt;  A .* B -&amp;gt; 表示哈达玛积（即对应项相乘）&lt;br&gt;  G = A / B -&amp;gt; 相当于A乘B的逆（inv()）&lt;br&gt;  H = A./ B -&amp;gt; 对应项相除&lt;br&gt;  C = A` -&amp;gt; 矩阵的转置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some Special Matrix&lt;br&gt;  linspace(x1, x2, N) : linearly spaced vectors&lt;/p&gt;
+&lt;p&gt;  用于产生x1,x2之间的N点行矢量。其中x1、x2、N分别为起始值、中止值、元素个数。若缺省N，默认点数为100。在matlab的命令窗口下输入help linspace或者doc linspace可以获得该函数的帮助信息。&lt;/p&gt;
+&lt;p&gt;eye(n) : n x n identity matrix（n x n 的单位矩阵）&lt;br&gt;zeros(n1, n2) : n1 x n2 zero matrix&lt;br&gt;ones(n1, n2) : n1 x n2 matrix with every entry as 1&lt;br&gt;diag() : diagonal matrix （对角矩阵）&lt;br&gt;rand() : uniformly distributed random numbers&lt;br&gt;  repmat(B, 3, 1) : repmat()重复，3表示行重复了三次，1表示列重复了1次，类似于分块矩阵&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some Matrix Related Functions&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;max(A) -&amp;gt; 每一列最大的数&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;sort(A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;max(max(A)) -&amp;gt; 矩阵中最大的数&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;sortrows(A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;min(A)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;size(A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;sum(A)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;length(A) -&amp;gt; 矩阵A行数和列数的较大值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;mean(A)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;find(A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基本上是按列（column）计算&lt;/p&gt;
+</content>
+        <category term="matlab" />
+        <updated>2022-03-17T11:14:48.000Z</updated>
+    </entry>
+</feed>
