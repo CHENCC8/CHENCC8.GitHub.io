@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="深度学习-线性回归, Orange">
-    <meta name="description" content="深度学习-线性回归
-概述  线性回归属于单层神经网络(一般有权重即为一层)，输出的是一个连续值，适用于回归问题。
+    <meta name="keywords" content="matlab变数（变量）与档案存取, Orange">
+    <meta name="description" content="matlab变数(变量)与档案存取MATLAB Data(Variables) Types
+Multidimensional Array(多维数组)[full or sparse(稀疏)]
 
-字母含义  x：特征（决定因素）  w：权重(这个例子中是标量)  b：偏差  y：标签（实际值）  y_hat(y^)：预">
+logical(逻辑)
+char
+numeric">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>深度学习-线性回归 | Orange</title>
+    <title>matlab变数（变量）与档案存取 | Orange</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +316,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">深度学习-线性回归</h1>
+                    <h1 class="description center-align post-title">matlab变数（变量）与档案存取</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +437,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">深度学习</span>
+                            <a href="/tags/matlab/">
+                                <span class="chip bg-color">matlab</span>
                             </a>
                         
                     </div>
@@ -447,8 +449,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                深度学习
+                            <a href="/categories/matlab/" class="post-category">
+                                matlab
                             </a>
                         
                     </div>
@@ -460,7 +462,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-06
+                    2022-03-21
                 </div>
                 
 
@@ -469,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.1k
                 </div>
                 
 
@@ -486,33 +488,358 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="深度学习-线性回归"><a href="#深度学习-线性回归" class="headerlink" title="深度学习-线性回归"></a>深度学习-线性回归</h1><ul>
-<li><p>概述<br>  线性回归属于单层神经网络(一般有权重即为一层)，输出的是一个连续值，适用于回归问题。</p>
-</li>
-<li><p>字母含义<br>  x：特征（决定因素）<br>  <strong>w</strong>：权重(这个例子中是标量)<br>  b：偏差<br>  y：标签（实际值）<br>  y_hat(y^)：预测值</p>
-<h2 id="线性回归基本要素"><a href="#线性回归基本要素" class="headerlink" title="线性回归基本要素"></a>线性回归基本要素</h2></li>
-<li><p><strong>模型（房价预测）</strong><br>  y_hat = x1w1 + x2w2 + b</p>
-</li>
-<li><p><strong>模型训练</strong><br>  通过数据寻找特定的模型参数值，使模型在数据上的误差尽可能小。</p>
-</li>
-<li><p><strong>训练模型</strong><br>                 假设采集样本数为n，索引为i的样本的特征为x<del>1</del>^(i)^和x<del>2</del>^(i)^,标签为y^(i)^，对于索引为i的房屋，线性回归模型的房屋价格预测表达式为：<br>                                                     y_hat^(i)^ = x<del>1</del>^(i)^w<del>1</del> + x<del>2</del>^(i)^w<del>2</del> + b</p>
-</li>
-<li><p><strong>损失函数（一般使用平方函数）</strong> <span class="github-emoji"><span>😳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f633.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><br>  通常选取一个非负数作为误差，数值越小误差越小。<br>  表达式：l^(i)^(w<del>1</del>, w<del>2</del>, b) =^1^/<del>2</del>(y_hat^(i)^ - y^(i)^)^2^    （<strong>^1^/<del>2</del>便于求导</strong>）</p>
-<p>  通常使用所有样本误差的平均来衡量模型预测的质量<br>  即 l(w<del>1</del>, w<del>2</del>, b) = ^1^/<del>n</del>   ∑<del>i=1</del>^n^  l^(i)^(w<del>1</del>, w<del>2</del>, b) =  ^1^/<del>n</del>   ∑<del>i=1</del>^n^   ^1^/<del>2</del>( x<del>1</del>^(i)^w<del>1</del> + x<del>2</del>^(i)^w<del>2</del> + b - y^(i)^)^2^</p>
-<p>  理想模型参数记为w<del>1</del>^<em>^, w<del>2</del>^</em>^, b^<em>^ ，即 w<del>1</del>^</em>^, w<del>2</del>^<em>^, b^</em>^ = argmin l(w<del>1</del>, w<del>2</del>, b)，使训练样本损失最小。</p>
-</li>
-<li><p><strong>优化算法</strong>  <span class="github-emoji"><span>👿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f47f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><br>  解析解：可以直接用公式表达的解。<br>  数值解：只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。<br>  <strong>大多数深度学习模型没有解析解。</strong><br>  超参数：人为设定的参数，不需要通过训练模型学习。<br>  学习率：正数 </p>
+                <h1 id="matlab变数-变量-与档案存取"><a href="#matlab变数-变量-与档案存取" class="headerlink" title="matlab变数(变量)与档案存取"></a>matlab变数(变量)与档案存取</h1><h2 id="MATLAB-Data-Variables-Types"><a href="#MATLAB-Data-Variables-Types" class="headerlink" title="MATLAB Data(Variables) Types"></a>MATLAB Data(Variables) Types</h2><ul>
+<li><p>Multidimensional Array(多维数组)[full or sparse(稀疏)]</p>
 <ul>
-<li><strong>小批量随机梯度下降</strong>（sgd）  <span class="github-emoji"><span>😵</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f635.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><br>  算法：选取一组模型参数初始值（如随机选取），对参数进行多次迭代，使每次迭代都可能降低损失函数的值。每次迭代中，随机均匀采样一个由固定数目训练数据样本所组成的小批量，求小批量中数据样本的平均损失有关模型参数的导数（梯度）。</li>
+<li>logical(逻辑)</li>
+<li>char</li>
+<li>numeric(数值的)</li>
+<li>cell</li>
+<li>struct</li>
 </ul>
 </li>
-<li><p><strong>模型预测</strong>（模型推断或模型测试）<br>  得到的不一定是最优解w<del>1</del>^*^, w<del>2</del>^<em>^, b^</em>^，而是对最优解的一个<strong>近似</strong>。</p>
-</li>
-<li><p><strong>神经网络图</strong><br>  使用神经网络图直观地表现模型结构，隐去了模型参数权重和偏差。<br>  输入个数也叫特征数或特征向量维度。<br>  输入层不涉及计算。<br>  输出层中的神经元与输入层中各个输入完全连接，这里的输出层又叫全连接层或稠密层。</p>
-<h2 id="线性回归从零实现"><a href="#线性回归从零实现" class="headerlink" title="线性回归从零实现"></a>线性回归从零实现</h2><p>  太懒了不想打了…   <span class="github-emoji"><span>😶</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f636.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<h2 id="线性回归简洁实现"><a href="#线性回归简洁实现" class="headerlink" title="线性回归简洁实现"></a>线性回归简洁实现</h2>  <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mxnet <span class="keyword">import</span> autograd, nd, gluon</span><br><span class="line"><span class="keyword">from</span> mxnet.gluon <span class="keyword">import</span> data <span class="keyword">as</span> gdata, loss <span class="keyword">as</span> gloss, nn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成数据集</span></span><br><span class="line">num_inputs, num_examples = <span class="number">2</span>, <span class="number">1000</span></span><br><span class="line">true_w = [<span class="number">2</span>, -<span class="number">3.4</span>]</span><br><span class="line">true_b = <span class="number">4.2</span></span><br><span class="line">features = nd.random.normal(scale=<span class="number">1</span>, shape=(num_examples, num_inputs))</span><br><span class="line">labels = true_W[<span class="number">0</span>] * features[:, <span class="number">0</span>] + true_w[<span class="number">1</span>] * features[:, <span class="number">1</span>] + true_b</span><br><span class="line"><span class="comment"># 为使模型复杂加入噪音</span></span><br><span class="line">labels += nd.random.normal(scale=<span class="number">0.01</span>, shape=labels.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据集</span></span><br><span class="line">batch_size = <span class="number">10</span>   <span class="comment"># 批量大小</span></span><br><span class="line"><span class="comment"># 将训练数据的特征和标签组合</span></span><br><span class="line">dataset = gdata.ArrayDataset(features, labels)</span><br><span class="line">data_iter = gdata.DataLoader(dataset, batch_size, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># shuffle为True代表打乱顺序</span></span><br><span class="line"></span><br><span class="line">net = nn.Sequential()</span><br><span class="line"><span class="comment"># nn是neural networks（神经网络）的缩写</span></span><br><span class="line"><span class="comment"># net是Sequential（序列）实例。Sequential实例：看作一个串联各个层的容器</span></span><br><span class="line">net.add(nn.Dense(<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 一个Dense表示一层，参数值为输出个数</span></span><br><span class="line"><span class="comment"># 在容器中依次加入层</span></span><br><span class="line"><span class="comment"># Gluon中无需指定每一层输入形状</span></span><br><span class="line"></span><br><span class="line">net.initialize(init.Normal(sigma=<span class="number">0.01</span>))</span><br><span class="line"><span class="comment"># init模块提供模型初始化参数的各种方法</span></span><br><span class="line">loss = gloss.L2Loss()</span><br><span class="line"><span class="comment"># 平方损失即L2范数损失</span></span><br><span class="line">trainer = gluon.Trainer(net.collect_params(), <span class="string">'sgd'</span>, {<span class="string">'learing_rate'</span>: <span class="number">0.03</span>})</span><br><span class="line"><span class="comment"># 创建Trainer实例，参数通过collect_params函数获取参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练参数</span></span><br><span class="line">num_epochs = <span class="number">3</span>  <span class="comment"># 迭代次数</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, nums_epochs + <span class="number">1</span>):</span><br><span class="line">	<span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">		<span class="keyword">with</span> autogard.record():</span><br><span class="line">			l = loss(net(X), y)</span><br><span class="line">		l.backward()  <span class="comment"># 计算梯度</span></span><br><span class="line">		trainer.step(batch_size)  <span class="comment"># 表示一次迭代，每次迭代更新参数</span></span><br><span class="line">	l = loss(net(features), labels)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'epoch %d, loss: %f'</span> %(epoch, l.mean().asnumpy()))</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>Scalar(标量)</p>
+<ul>
+<li>function handle(@)</li>
 </ul>
-<p>​    </p>
+</li>
+<li><p>Variable(Data) Type Conversion</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">double()</td>
+<td align="center">single()</td>
+</tr>
+<tr>
+<td align="center">int8()</td>
+<td align="center">uint8()</td>
+</tr>
+<tr>
+<td align="center">int16()</td>
+<td align="center">uint16()</td>
+</tr>
+<tr>
+<td align="center">int32()</td>
+<td align="center">uint32()</td>
+</tr>
+<tr>
+<td align="center">int64()</td>
+<td align="center">uint64()</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Character(char)<br>  A character is represented in ASCII using a numeric code between 0 to 255<br>  Create a character or a string by putting them into a pair of apostrophe(单引号)</p>
+</li>
+</ul>
+<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><p>An array collects characters<br>s1 = ‘Example’<br>s2 = ‘String’<br>String concatenation<br>s3 = [s1 s2]<br>s4 = [s1;s2]    -&gt; 两个字符串长度必须相等</p>
+<ul>
+<li>Logical Operations and Assignments<br>  Many numerical and logical operators can be applied to strings<br>  e.g.    str = ‘aardvark’    ‘a’ = str 返回1和0的向量<br>  (和每一个都进行比较)</li>
+</ul>
+<h3 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h3><p>A method of storing heterogeneous data(存储异构数据)<br>Structures contain arrays called <strong>fields</strong></p>
+<ul>
+<li>Structure Functions</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cell2struct</td>
+<td align="left">Convert cell array to structure array</td>
+</tr>
+<tr>
+<td align="center">fieldnames</td>
+<td align="left">Field names of structure, or public fields of object</td>
+</tr>
+<tr>
+<td align="center">getfield</td>
+<td align="left">Field of structure array</td>
+</tr>
+<tr>
+<td align="center">isfield</td>
+<td align="left">Determine whether input is structure array field</td>
+</tr>
+<tr>
+<td align="center">isstruct</td>
+<td align="left">Determine whether input is structure array</td>
+</tr>
+<tr>
+<td align="center">orderfields</td>
+<td align="left">Order fields of structure array</td>
+</tr>
+<tr>
+<td align="center">rmfield</td>
+<td align="left">Remove fields from structure</td>
+</tr>
+<tr>
+<td align="center">setfield</td>
+<td align="left">Assign values to structure array field</td>
+</tr>
+<tr>
+<td align="center">struct</td>
+<td align="left">Create structure array field</td>
+</tr>
+<tr>
+<td align="center">struct2cell</td>
+<td align="left">Convert structure to cell array</td>
+</tr>
+<tr>
+<td align="center">structfun</td>
+<td align="left">Apply function to each field of scalar structure</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Nesting Structures（即结构体的嵌套）</li>
+</ul>
+<p>e.g.</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A = struct(<span class="string">'data'</span>, [<span class="number">3</span> <span class="number">4</span> <span class="number">7</span>; <span class="number">8</span> <span class="number">0</span> <span class="number">1</span>], <span class="string">'nest'</span>, ...</span><br><span class="line">struct(<span class="string">'testnum'</span>, <span class="string">'Test1'</span>, <span class="string">'xdata'</span>, [<span class="number">4</span> <span class="number">2</span> <span class="number">8</span>], <span class="string">'ydata'</span>, [<span class="number">7</span> <span class="number">1</span> <span class="number">6</span>]));</span><br><span class="line">A(<span class="number">2</span>).data = [<span class="number">9</span> <span class="number">3</span> <span class="number">2</span>; <span class="number">7</span> <span class="number">6</span> <span class="number">5</span>];</span><br><span class="line">A(<span class="number">2</span>).nest.testnum = <span class="string">'Test 2'</span>;</span><br><span class="line">A(<span class="number">2</span>).nest.xdata = [<span class="number">3</span> <span class="number">4</span> <span class="number">2</span>];</span><br><span class="line">A(<span class="number">2</span>).nest.ydata = [<span class="number">5</span> <span class="number">0</span> <span class="number">9</span>];</span><br><span class="line">A.nest</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Cell-Array"><a href="#Cell-Array" class="headerlink" title="Cell Array"></a>Cell Array</h3><p>Another method of storing heterogeneous data<br>Similar to matrix but each entry contains different type of data<br>Declared using {}</p>
+<p>e.g.</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A(<span class="number">1</span>, <span class="number">1</span>) = {[<span class="number">1</span> <span class="number">4</span> <span class="number">3</span>; <span class="number">0</span> <span class="number">5</span> <span class="number">8</span>; <span class="number">7</span> <span class="number">2</span> <span class="number">9</span>]};</span><br><span class="line">A(<span class="number">1</span>, <span class="number">2</span>) = {<span class="string">'Anne Smith'</span>};</span><br><span class="line">A(<span class="number">2</span>, <span class="number">1</span>) = {<span class="number">3</span> + <span class="number">7</span><span class="built_in">i</span>};</span><br><span class="line">A(<span class="number">2</span>, <span class="number">2</span>) = {-<span class="built_in">pi</span>:<span class="built_in">pi</span>:<span class="built_in">pi</span>};</span><br><span class="line">A</span><br><span class="line"><span class="comment">% 或者</span></span><br><span class="line">A{<span class="number">1</span>, <span class="number">1</span>} = [<span class="number">1</span> <span class="number">4</span> <span class="number">3</span>; <span class="number">0</span> <span class="number">5</span> <span class="number">8</span>; <span class="number">7</span> <span class="number">2</span> <span class="number">9</span>];</span><br><span class="line">A{<span class="number">1</span>, <span class="number">2</span>} = <span class="string">'Anne Smith'</span>;</span><br><span class="line">A{<span class="number">2</span>, <span class="number">1</span>} = <span class="number">3</span> + <span class="number">7</span><span class="built_in">i</span>;</span><br><span class="line">A{<span class="number">2</span>, <span class="number">2</span>} = -<span class="built_in">pi</span>:<span class="built_in">pi</span>:<span class="built_in">pi</span>;</span><br><span class="line">A</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>Accessing Cell Array<br>  Curly braces（大括号）, {}, are used to access the “content” of cell arrays<br>  即看内容用{}，看数据类型用()</p>
+</li>
+<li><p>Cell Array Functions</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cell</td>
+<td align="left">Create cell array</td>
+</tr>
+<tr>
+<td align="center">cell2mat</td>
+<td align="left">Convert cell array to numeric array</td>
+</tr>
+<tr>
+<td align="center">cell2struct</td>
+<td align="left">Convert cell array to structure array</td>
+</tr>
+<tr>
+<td align="center">celldisp</td>
+<td align="left">Cell array contents</td>
+</tr>
+<tr>
+<td align="center">cellfun</td>
+<td align="left">Apply function to each cell in cell array</td>
+</tr>
+<tr>
+<td align="center">cellplot</td>
+<td align="left">Graphically display structure of cell array</td>
+</tr>
+<tr>
+<td align="center">cellstr</td>
+<td align="left">Create cell array of strings from character array</td>
+</tr>
+<tr>
+<td align="center">iscell</td>
+<td align="left">Determine whether input is cell array</td>
+</tr>
+<tr>
+<td align="center">mat2cell</td>
+<td align="left">Convert array to cell array with different sized cells</td>
+</tr>
+<tr>
+<td align="center">num2cell</td>
+<td align="left">Convert array to cell array with consistently sized cells</td>
+</tr>
+<tr>
+<td align="center">struct2cell</td>
+<td align="left">convert structure to cell array</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="Multidimensional-Array"><a href="#Multidimensional-Array" class="headerlink" title="Multidimensional Array"></a>Multidimensional Array</h3><p>e.g.</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 索引为row,column,layer</span></span><br><span class="line"><span class="comment">% 但是这种方法数据过多时会很麻烦</span></span><br><span class="line">A{<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>} = [<span class="number">1</span> <span class="number">2</span>; <span class="number">4</span> <span class="number">5</span>];</span><br><span class="line">A{<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>} = <span class="string">'Name'</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>} = <span class="number">2</span><span class="number">-4</span><span class="built_in">i</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>} = <span class="number">7</span>;</span><br><span class="line">A{<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>} = <span class="string">'Name2'</span>;</span><br><span class="line">A{<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>} = <span class="number">3</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>} = <span class="number">0</span>:<span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>} = [<span class="number">4</span> <span class="number">5</span>]';</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>cat()方法(Array concatenation)</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span> <span class="number">2</span>;<span class="number">3</span> <span class="number">4</span>];</span><br><span class="line">B = [<span class="number">5</span> <span class="number">6</span>;<span class="number">7</span> <span class="number">8</span>];</span><br><span class="line">C = <span class="built_in">cat</span>(<span class="number">1</span>, A, B)		row(dim=<span class="number">1</span>)</span><br><span class="line">C = <span class="built_in">cat</span>(<span class="number">2</span>, A, B)		column(dim=<span class="number">2</span>)</span><br><span class="line">C = <span class="built_in">cat</span>(<span class="number">3</span>, A, B)		layer(dim=<span class="number">3</span>)</span><br><span class="line">A{<span class="number">1</span>,<span class="number">1</span>} = [<span class="number">1</span> <span class="number">2</span>; <span class="number">4</span> <span class="number">5</span>];</span><br><span class="line">A{<span class="number">1</span>,<span class="number">2</span>} = <span class="string">'Name'</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">1</span>} = <span class="number">2</span><span class="number">-4</span><span class="built_in">i</span>;</span><br><span class="line">A{<span class="number">2</span>,<span class="number">2</span>} = <span class="number">7</span>;</span><br><span class="line">B{<span class="number">1</span>,<span class="number">1</span>} = <span class="string">'Name2'</span>;</span><br><span class="line">B{<span class="number">1</span>,<span class="number">2</span>} = <span class="number">3</span>;</span><br><span class="line">B{<span class="number">2</span>,<span class="number">1</span>} = <span class="number">0</span>:<span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">B{<span class="number">2</span>,<span class="number">2</span>} = [<span class="number">4</span> <span class="number">5</span>]';</span><br><span class="line">C = <span class="built_in">cat</span>(<span class="number">3</span>, A, B)</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>reshape()方法<br>  Returns a new array with assigned rows and columns<br>  e.g.</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = {<span class="string">'James Bond'</span>, [<span class="number">1</span> <span class="number">2</span>; <span class="number">3</span> <span class="number">4</span>; <span class="number">5</span> <span class="number">6</span>]; <span class="built_in">pi</span>, <span class="built_in">magic</span>(<span class="number">5</span>)}</span><br><span class="line">C = <span class="built_in">reshape</span>(A, <span class="number">1</span>, <span class="number">4</span>)</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>Checking Variable And Variable Status</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">isinteger</td>
+<td align="left">Determine if input is integer array</td>
+</tr>
+<tr>
+<td align="center">islogical</td>
+<td align="left">Determine if input is logical array</td>
+</tr>
+<tr>
+<td align="center">isnan</td>
+<td align="left">Detect an element that is not a number(NAN)</td>
+</tr>
+<tr>
+<td align="center">isnumeric</td>
+<td align="left">Determine if input is numeric array</td>
+</tr>
+<tr>
+<td align="center">isprime</td>
+<td align="left">Detect prime elements of array</td>
+</tr>
+<tr>
+<td align="center">isreal</td>
+<td align="left">Determine if all array elements are real numbers</td>
+</tr>
+<tr>
+<td align="center">iscell</td>
+<td align="left">Determine if input is cell array</td>
+</tr>
+<tr>
+<td align="center">ischar</td>
+<td align="left">Determine if input is character array</td>
+</tr>
+<tr>
+<td align="center">isempty</td>
+<td align="left">Determine if input is empty array</td>
+</tr>
+<tr>
+<td align="center">isequal</td>
+<td align="left">Determine if arrays are numerically equal</td>
+</tr>
+<tr>
+<td align="center">isfloat</td>
+<td align="left">Determine if input is floating-point array</td>
+</tr>
+<tr>
+<td align="center">isglobal</td>
+<td align="left">Determine if input is global variable</td>
+</tr>
+<tr>
+<td align="center">ishandle</td>
+<td align="left">Detect valid graphics object handles</td>
+</tr>
+<tr>
+<td align="center">isinf</td>
+<td align="left">Detect infinite elements of arrray</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="File-Access"><a href="#File-Access" class="headerlink" title="File Access"></a>File Access</h2><table>
+<thead>
+<tr>
+<th align="center">File Content</th>
+<th align="center">Import Function</th>
+<th align="center">Export Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MATLAB formatted data</td>
+<td align="center">load</td>
+<td align="center">save</td>
+</tr>
+<tr>
+<td align="center">Text</td>
+<td align="center">load</td>
+<td align="center">save</td>
+</tr>
+<tr>
+<td align="center">Spreadsheet(Excel)</td>
+<td align="center">xlsread</td>
+<td align="center">xlswrite</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>save() and load()</li>
+</ul>
+<p>Save (all) workspace data to a file</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">magic</span>(<span class="number">4</span>)</span><br><span class="line">save mydata1.mat</span><br><span class="line">save mydata2.mat -ascii</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Load data stored in a file:</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">load(<span class="string">'mydata1.mat'</span>)</span><br><span class="line">load(<span class="string">'mydata2.mat'</span>, <span class="string">'-ascii'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>Excel File Reading: xlsread()<br>  Read from Excel spreadsheet</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Score = xlsread(<span class="string">'04Score.xlsx'</span>)</span><br><span class="line">Score = xlsread(<span class="string">'04Score.xlsx'</span>, <span class="string">'B2:D4'</span>)</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>Excel File Writing: xlswrite()<br>  Calculate the means and write into Excel spreadsheet:</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">M = <span class="built_in">mean</span>(Score')'</span><br><span class="line"><span class="comment">% xlswrite()函数参数分别是文件名，要写入的矩阵或字符串，sheet，写入的地方。</span></span><br><span class="line">xlswrite(<span class="string">'04Score.xlsx'</span>, M, <span class="number">1</span>, <span class="string">'E2:E4'</span>);</span><br><span class="line">xlswrite(<span class="string">'04Score.xlsx'</span>, {<span class="string">'Mean'</span>}, <span class="number">1</span>, <span class="string">'E1'</span>);</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>Getting Text in Excel Spreadsheet<br>  Getting both the text and numbers<br>  [Score Header] = xlsread(‘04Score.xlsx’)</p>
+</li>
+<li><p>Low-level File Input/Output<br>  Read and write file at the byte or charater level<br>  A file has an ID fid<br>  Location in the file is specified by a pointer that can be moved around</p>
+</li>
+<li><p>Low-level File I/O Functions</p>
+<table>
+<thead>
+<tr>
+<th align="center">Function</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">fopen</td>
+<td align="left">Open file, or obtain information about open files</td>
+</tr>
+<tr>
+<td align="center">fclose</td>
+<td align="left">Close one or all open files</td>
+</tr>
+<tr>
+<td align="center">fscanf</td>
+<td align="left">Read data from text file</td>
+</tr>
+<tr>
+<td align="center">fprintf</td>
+<td align="left">Write data to text file</td>
+</tr>
+<tr>
+<td align="center">feof</td>
+<td align="left">Test for end-of-file</td>
+</tr>
+</tbody></table>
+<p>  Open and close a file:<br>  fid = fopen(‘[filename]’, ‘[permission]’);<br>  permission: ‘r’, ‘r+’, ‘w’, ‘w+’, ‘a’, ‘a+’<br>  status = fclose(fid);</p>
+</li>
+<li><p>Writing Sine Values into A File</p>
+<figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">10</span>;</span><br><span class="line">y = <span class="built_in">sin</span>(x);</span><br><span class="line">fid = fopen(<span class="string">'sinx.txt'</span>, <span class="string">'w'</span>);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">11</span></span><br><span class="line">	fprintf(fid, <span class="string">'%5.3f %8.4f\n'</span>, x(<span class="built_in">i</span>), y(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fclose(fid);</span><br><span class="line"><span class="comment">% type是查看的意思</span></span><br><span class="line"><span class="built_in">type</span> sinx.txt</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
 
                 
             </div>
@@ -539,7 +866,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chencc8.github.io/2022/03/06/shen-du-xue-xi-xian-xing-hui-gui/">https://chencc8.github.io/2022/03/06/shen-du-xue-xi-xian-xing-hui-gui/</a>
+                    <a href="https://chencc8.github.io/2022/03/21/matlab-bian-shu-bian-liang-yu-dang-an-cun-qu/">https://chencc8.github.io/2022/03/21/matlab-bian-shu-bian-liang-yu-dang-an-cun-qu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -577,8 +904,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">深度学习</span>
+                                <a href="/tags/matlab/">
+                                    <span class="chip bg-color">matlab</span>
                                 </a>
                             
                         </div>
@@ -756,13 +1083,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/06/shen-du-xue-xi-duo-ceng-gan-zhi-ji/">
+                <a href="/2022/03/22/matlab-chu-jie-hui-tu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="深度学习-多层感知机">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="matlab初阶绘图">
                         
-                        <span class="card-title">深度学习-多层感知机</span>
+                        <span class="card-title">matlab初阶绘图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -773,14 +1100,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/matlab/" class="post-category">
+                                    matlab
                                 </a>
                             
                             
@@ -790,8 +1117,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/matlab/">
+                        <span class="chip bg-color">matlab</span>
                     </a>
                     
                 </div>
@@ -805,13 +1132,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/20/nim-you-xi/">
+                <a href="/2022/03/20/matlab-jie-gou-hua-cheng-shi-yu-zi-ding-yi-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Nim游戏">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="matlab结构化程式与自定义函数">
                         
-                        <span class="card-title">Nim游戏</span>
+                        <span class="card-title">matlab结构化程式与自定义函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -822,14 +1149,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/leetcode/" class="post-category">
-                                    leetcode
+                            <a href="/categories/matlab/" class="post-category">
+                                    matlab
                                 </a>
                             
                             
@@ -839,12 +1166,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/matlab/">
+                        <span class="chip bg-color">matlab</span>
                     </a>
                     
                 </div>
